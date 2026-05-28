@@ -1,0 +1,8 @@
+{
+  "name": "POSB Settlement Guide",
+  "description": "A comprehensive presentation guide for the settlement of deceased claims in Post Office Savings Bank (POSB).",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
