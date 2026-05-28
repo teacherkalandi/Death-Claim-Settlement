@@ -31,29 +31,65 @@ export const slides: Slide[] = [
     id: 'intro',
     title: 'Core Principles & Introduction',
     content: (
-      <div className="flex-1 flex flex-col gap-8 justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col gap-4">
-            <div className="w-12 h-12 bg-red-50 text-red-600 flex items-center justify-center rounded-xl">
-              <Clock size={24} />
+      <div className="flex-1 flex flex-col gap-6 overflow-y-auto pr-2 pb-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="bg-white p-5 rounded-xl border border-red-100 shadow-sm flex flex-col gap-3 transition-all hover:shadow-md">
+            <div className="w-10 h-10 bg-red-50 text-red-600 flex items-center justify-center rounded-lg">
+              <Clock size={20} />
             </div>
-            <h3 className="text-xl font-bold text-slate-900">7-Day Mandate</h3>
-            <p className="text-slate-600 leading-relaxed">
+            <h3 className="text-lg font-bold text-red-900">7-Day Mandate</h3>
+            <p className="text-slate-700 text-sm leading-relaxed">
               The entire settlement process, regardless of scheme or claim type, MUST be completed within exactly <strong>7 working days</strong> of receiving the claim. Delay holds the official personally responsible.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col gap-4">
-            <div className="w-12 h-12 bg-amber-50 text-amber-600 flex items-center justify-center rounded-xl">
-              <CheckCircle size={24} />
+          <div className="bg-white p-5 rounded-xl border border-red-100 shadow-sm flex flex-col gap-3 transition-all hover:shadow-md">
+            <div className="w-10 h-10 bg-amber-50 text-amber-600 flex items-center justify-center rounded-lg">
+              <CheckCircle size={20} />
             </div>
-            <h3 className="text-xl font-bold text-slate-900">Payment Medium</h3>
-            <p className="text-slate-600 leading-relaxed">
+            <h3 className="text-lg font-bold text-red-900">Payment Medium</h3>
+            <p className="text-slate-700 text-sm leading-relaxed">
               All deceased claim payouts must invariably be made via <strong>Crossed Cheque</strong> or <strong>credit directly into the POSB Account</strong>. Cash payments are strictly prohibited.
+            </p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-red-100 shadow-sm flex flex-col gap-3 transition-all hover:shadow-md">
+            <div className="w-10 h-10 bg-red-50 text-red-600 flex items-center justify-center rounded-lg">
+              <CheckCircle size={20} />
+            </div>
+            <h3 className="text-lg font-bold text-red-900">Simplified KYC</h3>
+            <p className="text-slate-700 text-sm leading-relaxed">
+              Verify original documents at receipt. Physical presence of witnesses is <strong>no longer required</strong> if their signatures are present on the KYC copy.
+            </p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-red-100 shadow-sm flex flex-col gap-3 transition-all hover:shadow-md">
+            <div className="w-10 h-10 bg-amber-50 text-amber-600 flex items-center justify-center rounded-lg">
+              <FileSignature size={20} />
+            </div>
+            <h3 className="text-lg font-bold text-red-900">Streamlined Sanctions</h3>
+            <p className="text-slate-700 text-sm leading-relaxed">
+              No separate sanction memo is needed from Sub/Head PO. Sanction directly in <strong>Part 2 of Form-11</strong> ('For Office Use Only').
+            </p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-red-100 shadow-sm flex flex-col gap-3 transition-all hover:shadow-md">
+            <div className="w-10 h-10 bg-blue-50 text-blue-600 flex items-center justify-center rounded-lg">
+              <Clock size={20} />
+            </div>
+            <h3 className="text-lg font-bold text-red-900">Digital Payment</h3>
+            <p className="text-slate-700 text-sm leading-relaxed">
+              Mandate ECS/POSB transfers over cheques when possible. Obtain signatures on acquittance to prevent unnecessary visits.
+            </p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-red-100 shadow-sm flex flex-col gap-3 transition-all hover:shadow-md">
+            <div className="w-10 h-10 bg-emerald-50 text-emerald-600 flex items-center justify-center rounded-lg">
+              <Files size={20} />
+            </div>
+            <h3 className="text-lg font-bold text-red-900">No Redundant Checks</h3>
+            <p className="text-slate-700 text-sm leading-relaxed">
+              No further SDI (P) or PRI (P) verification is required if the submitted claim case contains all complete and verified documents.
             </p>
           </div>
         </div>
 
-        <div className="mt-4">
+        <div className="mt-2">
           <h3 className="text-lg font-bold text-slate-900 mb-4 px-2 tracking-tight">The Three Types of Claims</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {['Type 1: With Nomination', 'Type 2: With Legal Evidence', 'Type 3: Without Nom/Evidence (≤ ₹5L)'].map((type, i) => (
@@ -73,8 +109,8 @@ export const slides: Slide[] = [
     id: 'common-docs',
     title: 'Universal Documents Required',
     content: (
-      <div className="flex-1 flex gap-8">
-        <div className="w-1/3 bg-red-800 text-white p-8 rounded-2xl shadow-lg flex flex-col shadow-red-900/10 border-b-4 border-amber-400">
+      <div className="flex-1 flex flex-col md:flex-row gap-6 md:gap-8 h-full">
+        <div className="w-full md:w-1/3 bg-red-800 text-white p-6 md:p-8 rounded-2xl shadow-lg flex flex-col shadow-red-900/10 border-b-4 border-amber-400">
           <Files size={32} className="mb-6 text-amber-400" />
           <h3 className="text-2xl font-bold mb-4">Baseline Standard</h3>
           <p className="text-red-100 leading-relaxed">
@@ -89,7 +125,7 @@ export const slides: Slide[] = [
             </p>
           </div>
         </div>
-        <div className="w-2/3 flex flex-col justify-center">
+        <div className="w-full md:w-2/3 flex flex-col justify-center overflow-y-auto pr-2 pb-2">
           <ul className="space-y-4">
             {[
               'Claim Application Form (in prescribed format, duplicate)',
@@ -125,7 +161,7 @@ export const slides: Slide[] = [
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 flex-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1">
           <div className="bg-white border border-red-100 rounded-2xl p-6 flex flex-col gap-4 shadow-sm">
             <h3 className="text-xl font-bold text-red-900 border-b border-red-50 pb-3">Multiple Nominees</h3>
             <ul className="space-y-3 text-slate-700">
@@ -195,10 +231,10 @@ export const slides: Slide[] = [
            </div>
          </div>
 
-         <div className="mt-4 flex-1">
-            <h3 className="text-lg font-bold text-red-900 mb-4">Financial Sanction Authorities</h3>
-            <div className="overflow-hidden border border-red-200 rounded-xl shadow-sm">
-              <table className="min-w-full divide-y bg-white divide-red-100 relative">
+         <div className="mt-4 flex-1 overflow-y-auto">
+            <h3 className="text-lg font-bold text-red-900 mb-4 sticky top-0 bg-orange-50/90 py-2 z-10 backdrop-blur-sm">Financial Sanction Authorities</h3>
+            <div className="overflow-x-auto border border-red-200 rounded-xl shadow-sm bg-white">
+              <table className="min-w-full divide-y divide-red-100 relative w-[600px] md:w-full">
                 <thead className="bg-red-50 text-left">
                   <tr>
                     <th className="px-6 py-4 text-sm font-semibold text-red-900">Post Office Status / Grade</th>
@@ -208,15 +244,19 @@ export const slides: Slide[] = [
                 <tbody className="divide-y divide-red-50">
                   <tr>
                     <td className="px-6 py-4 text-sm text-slate-800">T/S SPM & LSG SPM (Lower Selection Grade)</td>
-                    <td className="px-6 py-4 text-sm font-mono text-right text-red-900 font-bold">₹ 50,000</td>
+                    <td className="px-6 py-4 text-sm font-mono text-right text-red-900 font-bold">₹50,000</td>
                   </tr>
                   <tr className="bg-amber-50">
-                    <td className="px-6 py-4 text-sm text-slate-800">HSG-II SPM / HSG-I PM (Non-Gazetted)</td>
-                    <td className="px-6 py-4 text-sm font-mono text-right font-bold text-red-900">No Limit</td>
+                    <td className="px-6 py-4 text-sm text-slate-800">HSG-II SPM</td>
+                    <td className="px-6 py-4 text-sm font-mono text-right font-bold text-red-900">₹1,00,000</td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 text-sm text-slate-800">Sr. PM / SPOs / All Gazetted (Group A & B) Officers</td>
-                    <td className="px-6 py-4 text-sm font-mono text-right font-bold text-red-900">No Limit</td>
+                    <td className="px-6 py-4 text-sm text-slate-800">HSG-I Office (SPM/PM)</td>
+                    <td className="px-6 py-4 text-sm font-mono text-right font-bold text-red-900">Any Amount</td>
+                  </tr>
+                  <tr className="bg-amber-50">
+                    <td className="px-6 py-4 text-sm text-slate-800">Sr. PM / Chief PM / DO</td>
+                    <td className="px-6 py-4 text-sm font-mono text-right font-bold text-red-900">Any Amount</td>
                   </tr>
                 </tbody>
               </table>
@@ -248,52 +288,49 @@ export const slides: Slide[] = [
                   <div className="bg-red-50 p-2 rounded-lg font-bold text-red-700">F-13</div>
                   <div>
                     <strong className="block text-slate-900 text-sm mb-0.5">Affidavit</strong>
-                    <p className="text-xs text-slate-600">Signed by: <strong className="text-slate-800">All Legal Heirs</strong><br/>Executed before: Notary Public</p>
+                    <p className="text-xs text-slate-600">Signed by: <strong className="text-slate-800">All Legal Heirs</strong><br/>Executed on: <strong className="text-slate-800">₹200 Stamp Paper</strong> before Notary</p>
                   </div>
                 </li>
                 <li className="bg-white p-3 rounded-xl border border-red-100 shadow-sm flex items-start gap-3">
                   <div className="bg-red-50 p-2 rounded-lg font-bold text-red-700">F-14</div>
                   <div>
                     <strong className="block text-slate-900 text-sm mb-0.5">Letter of Disclaimer</strong>
-                    <p className="text-xs text-slate-600">Signed by: <strong className="text-slate-800">All Legal Heirs EXCEPT Claimant</strong><br/>Executed before: Notary Public</p>
+                    <p className="text-xs text-slate-600">Signed by: <strong className="text-slate-800">All Legal Heirs EXCEPT Claimant</strong><br/>Executed on: <strong className="text-slate-800">₹200 Stamp Paper</strong> before Notary</p>
                   </div>
                 </li>
                 <li className="bg-white p-3 rounded-xl border border-red-100 shadow-sm flex items-start gap-3">
                   <div className="bg-red-50 p-2 rounded-lg font-bold text-red-700">F-15</div>
                   <div>
                     <strong className="block text-slate-900 text-sm mb-0.5">Letter of Indemnity</strong>
-                    <p className="text-xs text-slate-600">Signed by: <strong className="text-slate-800">Claimant, Sureties & Witnesses</strong><br/>Executed before: Notary Public</p>
+                    <p className="text-xs text-slate-600">Signed by: <strong className="text-slate-800">Claimant, Sureties & Witnesses</strong><br/>Executed on: <strong className="text-slate-800">₹500 Stamp Paper</strong> before Notary</p>
                   </div>
                 </li>
               </ul>
             </div>
 
-            <div>
-              <h3 className="text-xl font-bold text-red-900 mb-4 border-b border-red-100 pb-2">Sanctioning Limits Matrix (Revised 2023)</h3>
-              <div className="border border-red-200 rounded-xl overflow-hidden bg-white shadow-sm">
-                <table className="min-w-full divide-y divide-red-100">
+            <div className="w-full overflow-hidden flex flex-col h-full">
+              <h3 className="text-xl font-bold text-red-900 mb-4 border-b border-red-100 pb-2 flex-shrink-0">Sanctioning Limits Matrix (Revised 2023)</h3>
+              <div className="border border-red-200 rounded-xl overflow-x-auto bg-white shadow-sm flex-1">
+                <table className="min-w-full divide-y divide-red-100 w-[500px] md:w-full">
                    <tbody className="divide-y divide-red-50">
                       <tr>
                         <td className="px-4 py-3 text-sm text-slate-800 font-medium">T/S Departmental SOs / LSG SOs</td>
                         <td className="px-4 py-3 text-sm font-mono text-right font-bold text-red-900">₹50,000</td>
                       </tr>
                       <tr className="bg-amber-50/50">
-                        <td className="px-4 py-3 text-sm text-slate-800 font-medium">HSG-II, HSG-I (Non-Gazetted SOs/HPOs)</td>
+                        <td className="px-4 py-3 text-sm text-slate-800 font-medium">HSG-II SPM / HSG-I Office</td>
                         <td className="px-4 py-3 text-sm font-mono text-right font-bold text-red-900">₹1,00,000</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 text-sm text-slate-800 font-medium">SPOs, Sr. PM, Gazetted Group-B/A</td>
-                        <td className="px-4 py-3 text-sm font-mono text-right font-bold w-32 text-red-900">₹5,00,000</td>
-                      </tr>
-                      <tr className="bg-amber-50/50">
-                        <td className="px-4 py-3 text-sm text-slate-800 font-medium">Regional Director / Director GPO</td>
-                        <td className="px-4 py-3 text-sm font-mono text-right font-bold w-32 text-red-900">No Limit</td>
+                        <td className="px-4 py-3 text-sm text-slate-800 font-medium">Sr. PM / Chief PM / DO</td>
+                        <td className="px-4 py-3 text-sm font-mono text-right font-bold w-32 text-red-900">₹5,00,000*</td>
                       </tr>
                    </tbody>
                 </table>
               </div>
-              <p className="mt-4 text-xs text-red-800 bg-red-50 p-3 rounded-lg border border-red-100">
-                <strong>Note:</strong> Calculate Balance = Account credit + interest accrued up to the end of the preceding financial year. For certificates, use Face Value + accrued interest.
+              <p className="mt-4 text-xs text-red-800 bg-red-50 p-3 rounded-lg border border-red-100 flex flex-col gap-2">
+                <span><strong>* Note:</strong> The ₹5 Lakh limit applies separately to each registration number or account. Claims &gt; ₹5 Lakh require a succession certificate.</span>
+                <span><strong>Balance Calc:</strong> Account credit + interest accrued up to the end of the preceding financial year. For certificates, use Face Value + accrued interest.</span>
               </p>
             </div>
          </div>
@@ -304,25 +341,26 @@ export const slides: Slide[] = [
     id: 'schemes',
     title: 'Scheme Rules: Continuation & Interest',
     content: (
-      <div className="flex-1 flex flex-col pt-2 h-full">
+      <div className="flex-1 flex flex-col h-full mt-2">
          <div className="border border-red-200 shadow-sm rounded-2xl overflow-hidden bg-white flex-1 flex flex-col">
-           <table className="w-full text-left flex-1 flex flex-col">
-             <thead className="bg-red-800 text-white flex w-full">
-               <tr className="flex w-full border-b-2 border-amber-400">
-                 <th className="py-4 px-6 text-sm font-semibold w-24">Scheme</th>
-                 <th className="py-4 px-6 text-sm font-semibold w-1/3 border-l border-red-700">Continuation Rule</th>
-                 <th className="py-4 px-6 text-sm font-semibold flex-1 border-l border-red-700">Interest Calculation</th>
-               </tr>
-             </thead>
-             <tbody className="divide-y divide-red-100 flex-1 flex flex-col overflow-y-auto">
-               {[
+           <div className="overflow-x-auto flex-1 h-full">
+             <table className="min-w-[800px] w-full text-left bg-white">
+               <thead className="bg-red-800 text-white sticky top-0 z-10">
+                 <tr className="border-b-2 border-amber-400">
+                   <th className="py-4 px-6 text-sm font-semibold w-24">Scheme</th>
+                   <th className="py-4 px-6 text-sm font-semibold w-1/3 border-l border-red-700">Continuation Rule</th>
+                   <th className="py-4 px-6 text-sm font-semibold flex-1 border-l border-red-700">Interest Calculation</th>
+                 </tr>
+               </thead>
+               <tbody className="divide-y divide-red-100">
+                 {[
                  ['SB / MIS', 'Cannot continue — must close.', 'Interest paid up to the preceding month of closure/refund.'],
                  ['RD / TD', 'Can be closed immediately OR transferred to claimant till maturity.', 'RD: Full maturity value if continued. TD: TD rate for completed years; POSA rate for extra months.'],
                  ['SCSS', 'Only Spouse (if sole nominee & eligible) can continue. Others must close.', 'SCSS rate up to date of death; POSA rate from date of death to preceding date of payment.'],
                  ['SSA / PPF', 'Cannot continue — must close.', 'PPF: Preceding month. SSA: SSA rate till death; POSA base rate till payment date.'],
                  ['NSC / KVP', 'Can continue till maturity OR close prematurely.', 'If continued: Full maturity. If closed prep: Apply explicit time-bracket tables for accrued rate.']
                ].map((row, i) => (
-                 <tr key={i} className={`flex w-full hover:bg-amber-50/50 transition-colors ${i % 2 === 0 ? 'bg-white' : 'bg-red-50/30'}`}>
+                 <tr key={i} className={`hover:bg-amber-50/50 transition-colors ${i % 2 === 0 ? 'bg-white' : 'bg-red-50/30'}`}>
                    <td className="py-4 px-6 text-sm font-bold w-24 text-red-900">{row[0]}</td>
                    <td className="py-4 px-6 text-sm text-slate-700 w-1/3 border-l border-red-100">{row[1]}</td>
                    <td className="py-4 px-6 text-sm text-slate-700 flex-1 border-l border-red-100 leading-relaxed">{row[2]}</td>
@@ -330,6 +368,7 @@ export const slides: Slide[] = [
                ))}
              </tbody>
            </table>
+           </div>
          </div>
       </div>
     )
@@ -426,6 +465,71 @@ export const slides: Slide[] = [
     )
   },
   {
+    id: 'finacle-ops',
+    title: 'Finacle Operations: System Closure',
+    content: (
+      <div className="flex flex-col gap-6 h-full flex-1 align-middle">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-slate-900 text-white p-6 rounded-2xl shadow-sm border border-slate-800">
+            <h3 className="text-xl font-bold border-b border-slate-700 pb-2 mb-4 text-amber-400">Phase 1: CIF Update</h3>
+            <p className="text-slate-300 text-sm mb-4">Must be done before invoking any closure menus.</p>
+            <ol className="list-decimal list-inside space-y-2 text-sm text-slate-300 font-mono">
+              <li>Invoke Menu: <strong className="text-white">CMRC</strong></li>
+              <li>Select Function: Modify</li>
+              <li>Enter CIF ID & click Go (F4)</li>
+              <li>Update Customer Status to: <strong className="text-red-400">Deceased</strong></li>
+              <li>Enter exact Date of Death</li>
+              <li>Submit (F10)</li>
+            </ol>
+            <div className="mt-4 p-3 bg-slate-800/50 rounded-lg text-xs border border-slate-700 text-slate-400">
+              <strong className="text-amber-400 block mb-1">Verify:</strong>
+              Log into Supervisor account and verify CMRC modification.
+            </div>
+          </div>
+
+          <div className="bg-red-800 text-white p-6 rounded-2xl shadow-sm border border-red-900 relative">
+            <h3 className="text-xl font-bold border-b border-red-700 pb-2 mb-4 text-amber-400">Phase 2: Account Closure</h3>
+            <ol className="list-decimal list-inside space-y-2 text-sm text-red-100 font-mono">
+              <li>Invoke specific Scheme Closure Menu (see below)</li>
+              <li>Enter Account ID</li>
+              <li>Transfer Type: <strong className="text-white">Transfer</strong></li>
+              <li>Transaction A/c ID: <strong className="text-amber-300">SOLID+0340</strong></li>
+              <li>Closure Reason: <strong className="text-amber-300">DTCLM</strong></li>
+              <li>Submit (F10) and Supervisor Verify</li>
+            </ol>
+            <div className="mt-4 p-3 bg-red-900/50 rounded-lg text-xs border border-red-700 text-red-200">
+              <strong className="text-amber-400 block mb-1"><AlertTriangle size={14} className="inline mr-1"/> Security Warning:</strong>
+              After closure, re-invoke CMRC and change CIF status to <strong className="text-white">Suspended</strong>.
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-xl border border-red-100 p-5 mt-auto">
+          <h3 className="font-bold text-red-900 mb-3 border-b border-red-50 pb-2">Scheme-to-Menu Mapping</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+             <div className="bg-amber-50 p-3 rounded-lg border border-amber-200 text-center">
+               <strong className="block text-amber-900">SB / PPF</strong>
+               <code className="text-amber-700 text-sm font-bold mt-1 block">HCAAC*</code>
+             </div>
+             <div className="bg-blue-50 p-3 rounded-lg border border-blue-200 text-center">
+               <strong className="block text-blue-900">RD</strong>
+               <code className="text-blue-700 text-sm font-bold mt-1 block">CRDCAAC</code>
+             </div>
+             <div className="bg-emerald-50 p-3 rounded-lg border border-emerald-200 text-center">
+               <strong className="block text-emerald-900">NSC / KVP</strong>
+               <code className="text-emerald-700 text-sm font-bold mt-1 block">CSCCAAC</code>
+             </div>
+             <div className="bg-purple-50 p-3 rounded-lg border border-purple-200 text-center">
+               <strong className="block text-purple-900">MIS/TD/SCSS</strong>
+               <code className="text-purple-700 text-sm font-bold mt-1 block">HCAACTD</code>
+             </div>
+          </div>
+          <p className="text-[10px] text-slate-500 mt-3 text-center">* PPF closure requires TWO supervisor logins for verification.</p>
+        </div>
+      </div>
+    )
+  },
+  {
     id: 'faq',
     title: 'Frequently Asked Questions (Q&A)',
     content: (
@@ -437,7 +541,7 @@ export const slides: Slide[] = [
           </h3>
           <p className="mt-3 text-slate-700 flex gap-3 items-start leading-relaxed">
             <span className="font-bold text-emerald-600 bg-emerald-50 p-1 rounded">A:</span> 
-            <span>If valid Legal Evidence is provided (Type 2 Claim), the claimant is <strong>NOT required</strong> to submit Form-13 (Affidavit), Form-14 (Letter of Disclaimer), or Form-15 (Letter of Indemnity). These non-judicial stamp paper forms are only mandatory for claims without nomination AND without legal evidence (Type 3).</span>
+            <span>If valid Legal Evidence is provided (Type 2 Claim), the claimant is <strong>NOT required</strong> to submit Form-13 (Affidavit) or Form-15 (Letter of Indemnity). However, <strong>Form-14 (Letter of Disclaimer)</strong> IS required on ₹200 non-judicial stamp paper, signed by all other legal heirs relinquishing their share (unless the court order specifies otherwise).</span>
           </p>
         </div>
 

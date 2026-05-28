@@ -37,7 +37,7 @@ export function SlideDeck({ slides }: SlideDeckProps) {
   const progressPercentage = ((currentIndex + 1) / slides.length) * 100;
 
   return (
-    <div className="w-full max-w-6xl aspect-[16/9] sm:aspect-auto sm:h-[85vh] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden relative border-4 border-amber-400">
+    <div className="w-full max-w-[95vw] mx-auto h-[95vh] md:h-[90vh] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden relative border-4 border-amber-400">
       {/* Top Progress Bar */}
       <div className="w-full h-1.5 bg-red-100 flex-shrink-0">
         <motion.div
@@ -57,10 +57,10 @@ export function SlideDeck({ slides }: SlideDeckProps) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="absolute inset-0 w-full h-full flex flex-col p-8 md:p-12 overflow-y-auto"
+            className="absolute inset-0 w-full h-full flex flex-col p-4 sm:p-6 md:p-8 lg:p-10 overflow-y-auto"
           >
             {currentSlide.title && (
-              <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-red-900 mb-8 pb-4 border-b border-red-200/60 flex-shrink-0">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-red-900 mb-6 pb-4 border-b border-red-200/60 flex-shrink-0">
                 {currentSlide.title}
               </h2>
             )}
